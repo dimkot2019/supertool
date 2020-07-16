@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Форма для работы с таблицами</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1>Супер тул - редактор данных в таблице</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+
+			<table id="usersList" class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col" style="width: 50px;">активн.</th>
+						<th scope="col">ФИО</th>
+						<th scope="col">Курс</th>
+						<th scope="col">мыло</th>
+						<th scope="col">средний балл</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><i class="fas fa-user text-danger"></i></td>
+						<td>Семеныч</td>
+						<td>3</td>
+						<td>mmm@mail.ru</td>
+						<td>4.55</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td><i class="fas fa-user text-success"></i></td>
+						<td>Марьям</td>
+						<td>5</td>
+						<td>santamaria@mail.ru</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><i class="fas fa-user text-success"></i></td>
+						<td>Larry Barry</td>
+						<td>5</td>
+						<td>santamaria@mail.ru</td>
+						<td>4.99</td>
+
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<br><br>
+			<h4>Добавить студента в таблицу</h4>
+			<form>
+				<div class="form-group">
+					<label for="userName">ФИО</label>
+					<input type="text" class="form-control" id="userName">
+					<!--small style="display: none;" id="emailHelp" class="form-text text-danger">Это поле обязательно для ввода</small-->
+					<small hidden id="nameHelp" class="form-text text-danger">Это поле обязательно для ввода</small>
+				</div>
+
+				<div class="form-group">
+					<label for="userEmail">Email address</label>
+					<input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp">
+					<small hidden id="emailHelp" class="form-text text-danger">Это поле обязательно для ввода</small>
+				</div>
+
+				<div class="form-group">
+					<label for="userCourse">Курс студента</label>
+					<select class="form-control" id="userCourse">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="userRank">Example Range input: <strong></strong></label>
+					<input type="range" class="form-control-range" id="userRank">
+				</div>
+
+				<div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" id="userDisabled">
+					<label class="form-check-label" for="userDisabled">отчислен (не активен)</label>
+				</div>
+
+
+				<button id="addUserButton" type="submit" class="btn btn-outline-primary">Добавить студента</button>
+
+				<button type="reset" class="btn btn-outline-secondary">Сбросить</button>
+			</form>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+	<script src="/js/fn.js"></script>
+</body>
+</html>
